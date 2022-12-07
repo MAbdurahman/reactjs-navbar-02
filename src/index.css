@@ -43,6 +43,7 @@
 
 	/*-----timing-----*/
 	--timing-function-01: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --timing-function-02: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 html {
@@ -150,9 +151,16 @@ i {
 
 .navbar-logo {
 	padding: 15px;
+  font-family: var(--ff-heading);
+  font-size: 24px;
+  letter-spacing: 1px;
 	color: #fff;
-	color: var(--clr-neutral-100);
-	pointer-events: none;
+	color: var(--clr-neutral-500);
+  cursor: pointer;
+  transition: color 0.33s ease;
+}
+.navbar-logo:hover {
+  color: var(--clr-neutral-200);
 }
 
 .navbar-mainbg {

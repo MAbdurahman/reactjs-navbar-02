@@ -45,11 +45,12 @@ export default function Navbar() {
 	return (
 		<nav className='navbar navbar-expand-lg navbar-mainbg'>
 			<div className='container'>
-				<li className='nav-item'>
+				<li className='nav-item navbar-brand-item'>
 					<Link
 						smooth={true}
+						offset={100}
 						className='navbar-brand navbar-logo'
-						to='app'
+						to='home'
 						exact
 					>
 						New Horizons
