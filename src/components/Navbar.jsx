@@ -45,14 +45,16 @@ export default function Navbar() {
 	return (
 		<nav className='navbar navbar-expand-lg navbar-mainbg'>
 			<div className='container'>
-				<Link
-					smooth={true}
-					className='navbar-brand navbar-logo'
-					to='home'
-					exact
-				>
-					New Horizons
-				</Link>
+				<li className='nav-item'>
+					<Link
+						smooth={true}
+						className='navbar-brand navbar-logo'
+						to='home'
+						exact
+					>
+						New Horizons
+					</Link>
+				</li>
 
 				<button
 					className='navbar-toggler'
@@ -110,10 +112,10 @@ export default function Navbar() {
 								smooth={true}
 								offset={-110}
 								className='nav-link'
-								to='services'
+								to='skills'
 								exact
 							>
-								<i className='fas fa-cogs'></i>Services
+								<i className='fas fa-cogs'></i>Skills
 							</Link>
 						</li>
 						<li className='nav-item'>
