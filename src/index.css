@@ -181,17 +181,25 @@ i {
 
 #navbarSupportedContent ul li a {
 	color: rgba(255, 255, 255, 0.5);
+	color: var(--clr-neutral-500);
 	text-decoration: none;
 	font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
 	display: block;
 	padding: 20px 20px;
 	transition-duration: 0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	position: relative;
+  transition: color 0.33s;
 }
 
+#navbarSupportedContent ul li:hover a {
+  color: var(--clr-neutral-200);
+}
 #navbarSupportedContent > ul > li.active > a {
 	color: #000000;
+	color: var(--clr-neutral-800);
 	background-color: transparent;
 	transition: all 0.7s;
 }
@@ -223,7 +231,7 @@ i {
 	transition-duration: 0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	background-color: #fff;
-	background-color: var(--clr-neutral-100);
+	background-color: var(--clr-neutral-200);
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	margin-top: 10px;
@@ -235,7 +243,7 @@ i {
 	width: 25px;
 	height: 25px;
 	background-color: #fff;
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-200);
 	bottom: 10px;
 }
 
@@ -255,6 +263,7 @@ i {
 	height: 50px;
 	border-radius: 50%;
 	background-color: #000000;
+	background-color: var(--clr-neutral-800);
 }
 
 .hori-selector .right:before {
@@ -310,7 +319,6 @@ i {
 	position: fixed;
 	bottom: 32px;
 	right: 32px;
-
 	font-size: 2.5rem;
 	display: flex;
 	justify-content: center;
@@ -322,18 +330,19 @@ i {
 	width: 50px;
 
 	border-radius: 50%;
-	border: 3px solid #333;
-	background-color: #333;
+	border: 3px solid var(--clr-neutral-800);
+	background-color: var(--clr-neutral-800);
 	color: #8b8989;
+	color: var(--clr-neutral-500);
 	cursor: pointer;
 }
 
 .top-btn-style:hover {
-	animation: none;
-	background-color: #333;
-	color: #fff;
-  color: var(--clr-neutral-100);
-	border: 3px solid #333;
+/* 	animation: none; */
+  border: 3px solid var(--clr-neutral-800);
+	background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-200);
+
 }
 
 .fas {

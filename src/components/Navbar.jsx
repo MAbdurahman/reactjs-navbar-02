@@ -86,7 +86,7 @@ export default function Navbar() {
 						<li className='nav-item active'>
 							<Link
 								smooth={true}
-								offset={-110}
+								offset={100}
 								className='nav-link'
 								to='home'
 								exact
@@ -98,7 +98,7 @@ export default function Navbar() {
 						<li className='nav-item'>
 							<Link
 								smooth={true}
-								offset={-110}
+								offset={100}
 								className='nav-link'
 								to='about'
 								exact
@@ -110,7 +110,7 @@ export default function Navbar() {
 						<li className='nav-item'>
 							<Link
 								smooth={true}
-								offset={-110}
+								offset={100}
 								className='nav-link'
 								to='skills'
 								exact
@@ -121,7 +121,7 @@ export default function Navbar() {
 						<li className='nav-item'>
 							<Link
 								smooth={true}
-								offset={-110}
+								offset={100}
 								className='nav-link'
 								to='portfolio'
 								exact
@@ -132,7 +132,7 @@ export default function Navbar() {
 						<li className='nav-item'>
 							<Link
 								smooth={true}
-								offset={-110}
+								offset={100}
 								className='nav-link'
 								to='contact'
 								exact
