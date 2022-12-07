@@ -49,7 +49,7 @@ export default function Navbar() {
 					<Link
 						smooth={true}
 						className='navbar-brand navbar-logo'
-						to='home'
+						to='app'
 						exact
 					>
 						New Horizons
@@ -77,7 +77,7 @@ export default function Navbar() {
 					className='collapse navbar-collapse'
 					id='navbarSupportedContent'
 				>
-					<ul className='navbar-nav ml-auto'>
+					<ul id='navbar-list' className='navbar-nav ml-auto'>
 						<div className='hori-selector'>
 							<div className='left'></div>
 							<div className='right'></div>

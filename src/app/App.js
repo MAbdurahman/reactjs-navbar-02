@@ -9,7 +9,7 @@ import Contact from './../pages/Contact';
 
 function App() {
 	return (
-		<>
+		<div id='app'>
 			<Navbar />
 			<ScrollTopButton />
 			<Home />
@@ -17,7 +17,7 @@ function App() {
 			<Skills />
 			<Portfolio />
 			<Contact />
-		</>
+		</div>
 	);
 }
 

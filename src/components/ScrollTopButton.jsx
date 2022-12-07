@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 export default function ScrollTopButton() {
-	const [showScrollButton, setShowScrollButton] = useState(false);
+	const [showScrollButton, setShowScrollButton] = useState(0);
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY >= 300) {
-				setShowScrollButton(true);
+				setShowScrollButton(1);
 			} else {
-				setShowScrollButton(false);
+				setShowScrollButton(0);
 			}
 		});
 	}, []);
 
 	const scrollToTop = () => {
 		window.scrollTo({
-			top: 0,
+			top: 100,
 			behavior: 'smooth',
 		});
 	};
@@ -25,9 +25,9 @@ export default function ScrollTopButton() {
 			{showScrollButton && (
 				<div
 					className='top-btn-position top-btn-style'
-					onclick={scrollToTop}
+					onClick={scrollToTop}
 				>
-					<i class='fas fa-chevron-up'></i>
+					<i className='fas fa-chevron-up'></i>
 				</div>
 			)}
 		</>
