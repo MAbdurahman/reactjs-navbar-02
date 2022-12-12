@@ -43,7 +43,7 @@
 
 	/*-----timing-----*/
 	--timing-function-01: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  --timing-function-02: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	--timing-function-02: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 html {
@@ -61,7 +61,7 @@ body {
 }
 
 /*=============================================
-        Typography
+         Typography
 ================================================*/
 h1,
 h2,
@@ -111,7 +111,7 @@ small,
 }
 
 /*=============================================
-        Grid
+         Grid
 ================================================*/
 .grid {
 	display: grid;
@@ -133,6 +133,10 @@ small,
 /* =============================================
             Utility Classes
 ================================================ */
+a.nav-link {
+	cursor: pointer;
+}
+
 .heading-text {
 	padding-top: 6em;
 	text-align: center;
@@ -151,16 +155,16 @@ i {
 
 .navbar-logo {
 	padding: 15px;
-  font-family: var(--ff-heading);
-  font-size: 24px;
-  letter-spacing: 1px;
+	font-family: var(--ff-heading);
+	font-size: 24px;
+	letter-spacing: 1px;
 	color: #fff;
 	color: var(--clr-neutral-500);
-  cursor: pointer;
-  transition: color 0.33s ease;
+	cursor: pointer;
+	transition: color 0.33s ease;
 }
 .navbar-logo:hover {
-  color: var(--clr-neutral-200);
+	color: var(--clr-neutral-200);
 }
 
 .navbar-mainbg {
@@ -192,18 +196,18 @@ i {
 	color: var(--clr-neutral-500);
 	text-decoration: none;
 	font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
+	font-weight: bold;
+	text-transform: uppercase;
 	display: block;
 	padding: 20px 20px;
 	transition-duration: 0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	position: relative;
-  transition: color 0.33s;
+	transition: color 0.33s;
 }
 
 #navbarSupportedContent ul li:hover a {
-  color: var(--clr-neutral-200);
+	color: var(--clr-neutral-200);
 }
 #navbarSupportedContent > ul > li.active > a {
 	color: #000000;
@@ -251,7 +255,7 @@ i {
 	width: 25px;
 	height: 25px;
 	background-color: #fff;
-  background-color: var(--clr-neutral-200);
+	background-color: var(--clr-neutral-200);
 	bottom: 10px;
 }
 
@@ -284,10 +288,12 @@ i {
 	left: -25px;
 }
 
+
 @media (max-width: 991px) {
 	#navbarSupportedContent ul li a {
 		padding: 12px 30px;
 	}
+
 
 	.hori-selector {
 		margin-top: 0px;
@@ -322,7 +328,16 @@ i {
 	}
 }
 
-/* scroll to top button */
+@media (max-width: 577px) {
+
+
+
+
+}
+
+/* =============================================
+            ScrollTopButton Component
+================================================ */
 .top-btn-position {
 	position: fixed;
 	bottom: 32px;
@@ -346,26 +361,33 @@ i {
 }
 
 .top-btn-style:hover {
-/* 	animation: none; */
-  border: 3px solid var(--clr-neutral-800);
+	border: 3px solid var(--clr-neutral-800);
 	background-color: var(--clr-neutral-800);
-  color: var(--clr-neutral-200);
-
+	color: var(--clr-neutral-200);
 }
 
 .fas {
 	margin: 0 auto;
 }
 
-/**************** page ****************/
+@media (max-width: 577px) {
+
+	.fas {
+		margin-right: 5vw;
+	}
+
+
+}
+
+/* =============================================
+            Page Class
+================================================ */
 .page {
 	min-height: 100vh;
 }
 
 /**************** nav-link ****************/
-a.nav-link {
-	cursor: pointer;
-}
+
 /**************** page ****************/
 /**************** page ****************/
 /**************** page ****************/

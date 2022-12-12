@@ -12,7 +12,10 @@ $(window).on('load', function () {
 window.onload = function () {
 	scrollSpy('#navbar-list', {
 		sectionClass: '.scrollspy',
-		menuActiveTarget: '.nav-link',
-		offset: 100,
+		menuActiveTarget: '.nav-item > a',
+		activeClass: 'active',
+		offset: 0,
 	});
+	
 };
+

@@ -9,7 +9,12 @@ import Contact from './../pages/Contact';
 
 function App() {
 	return (
-		<div id='app'>
+		<div
+			id='app'
+			data-spy='scroll'
+			data-target='.nav-item > a'
+			data-offset='50'
+		>
 			<Navbar />
 			<ScrollTopButton />
 			<Home />

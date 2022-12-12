@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function ScrollTopButton() {
-	const [showScrollButton, setShowScrollButton] = useState(0);
+	//**************** variables ****************//
+	const [showScrollButton, setShowScrollButton] = useState(false);
 
+	//**************** functions ****************//
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY >= 300) {
-				setShowScrollButton(1);
+				setShowScrollButton(true);
 			} else {
-				setShowScrollButton(0);
+				setShowScrollButton(false);
 			}
 		});
-	}, []);
+	}, [setShowScrollButton]);
 
 	const scrollToTop = () => {
 		window.scrollTo({
-			top: 100,
+			top: 0,
 			behavior: 'smooth',
 		});
 	};

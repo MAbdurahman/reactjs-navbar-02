@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import $ from 'jquery';
 
 export default function Navbar() {
+	
 	//**************** functions ****************//
 	function animation() {
 		let tabsNewAnim = $('#navbarSupportedContent');
@@ -11,15 +12,18 @@ export default function Navbar() {
 		let activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
 		let itemPosNewAnimTop = activeItemNewAnim.position();
 		let itemPosNewAnimLeft = activeItemNewAnim.position();
+
 		$('.hori-selector').css({
 			top: itemPosNewAnimTop.top + 'px',
 			left: itemPosNewAnimLeft.left + 'px',
 			height: activeWidthNewAnimHeight + 'px',
 			width: activeWidthNewAnimWidth + 'px',
 		});
+		
 		$('#navbarSupportedContent').on('click', 'li', function (e) {
 			$('#navbarSupportedContent ul li').removeClass('active');
 			$(this).addClass('active');
+
 			let activeWidthNewAnimHeight = $(this).innerHeight();
 			let activeWidthNewAnimWidth = $(this).innerWidth();
 			let itemPosNewAnimTop = $(this).position();
@@ -30,25 +34,42 @@ export default function Navbar() {
 				height: activeWidthNewAnimHeight + 'px',
 				width: activeWidthNewAnimWidth + 'px',
 			});
-		});
+		}); 
+
 	}
+	/* function backToTop() {
+
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		
+		});
+		let newTab = $('#navbarSupportedContent');
+		console.log(newTab.find('active'));
+	} */
 
 	useEffect(() => {
 		animation();
+
 		$(window).on('resize', function () {
 			setTimeout(function () {
 				animation();
 			}, 500);
 		});
+
 	}, []);
 
+
+
 	return (
-		<nav className='navbar navbar-expand-lg navbar-mainbg'>
+		<nav id="navbar"className='navbar navbar-expand-lg navbar-mainbg'>
 			<div className='container'>
 				<li className='nav-item navbar-brand-item'>
 					<Link
+						activeClass='active'
+						spy={true}
 						smooth={true}
-						offset={100}
+						offset={0}
 						className='navbar-brand navbar-logo'
 						to='home'
 						exact
@@ -86,8 +107,10 @@ export default function Navbar() {
 
 						<li className='nav-item active'>
 							<Link
+								activeClass='active'
+								spy={true}
 								smooth={true}
-								offset={100}
+								offset={0}
 								className='nav-link'
 								to='home'
 								exact
@@ -98,8 +121,10 @@ export default function Navbar() {
 
 						<li className='nav-item'>
 							<Link
+								activeClass='active'
+								spy={true}
 								smooth={true}
-								offset={100}
+								offset={0}
 								className='nav-link'
 								to='about'
 								exact
@@ -110,8 +135,10 @@ export default function Navbar() {
 
 						<li className='nav-item'>
 							<Link
+								activeClass='active'
+								spy={true}
 								smooth={true}
-								offset={100}
+								offset={0}
 								className='nav-link'
 								to='skills'
 								exact
@@ -121,8 +148,10 @@ export default function Navbar() {
 						</li>
 						<li className='nav-item'>
 							<Link
+								activeClass='active'
+								spy={true}
 								smooth={true}
-								offset={100}
+								offset={0}
 								className='nav-link'
 								to='portfolio'
 								exact
@@ -132,8 +161,10 @@ export default function Navbar() {
 						</li>
 						<li className='nav-item'>
 							<Link
+								activeClass='active'
+								spy={true}
 								smooth={true}
-								offset={100}
+								offset={0}
 								className='nav-link'
 								to='contact'
 								exact
