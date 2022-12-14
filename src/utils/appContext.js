@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import $ from 'jquery';
 
 const AppContext = React.createContext();
 

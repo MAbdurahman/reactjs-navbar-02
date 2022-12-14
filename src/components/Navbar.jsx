@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
+// import {useGlobalContext} from './../utils/appContext';
 import $ from 'jquery';
 
 export default function Navbar() {
-	
+	//**************** variables ****************//
+	// const { isOpen, handleClick } = useGlobalContext();
+	const homeRef = useRef();
 	//**************** functions ****************//
 	function animation() {
 		let tabsNewAnim = $('#navbarSupportedContent');
@@ -19,7 +22,7 @@ export default function Navbar() {
 			height: activeWidthNewAnimHeight + 'px',
 			width: activeWidthNewAnimWidth + 'px',
 		});
-		
+
 		$('#navbarSupportedContent').on('click', 'li', function (e) {
 			$('#navbarSupportedContent ul li').removeClass('active');
 			$(this).addClass('active');
@@ -34,8 +37,7 @@ export default function Navbar() {
 				height: activeWidthNewAnimHeight + 'px',
 				width: activeWidthNewAnimWidth + 'px',
 			});
-		}); 
-
+		});
 	}
 	/* function backToTop() {
 
@@ -50,7 +52,7 @@ export default function Navbar() {
 
 	useEffect(() => {
 		animation();
-
+	
 		$(window).on('resize', function () {
 			setTimeout(function () {
 				animation();
@@ -59,10 +61,8 @@ export default function Navbar() {
 
 	}, []);
 
-
-
 	return (
-		<nav id="navbar"className='navbar navbar-expand-lg navbar-mainbg'>
+		<nav id='navbar' className='navbar navbar-expand-lg navbar-mainbg'>
 			<div className='container'>
 				<li className='nav-item navbar-brand-item'>
 					<Link
@@ -114,6 +114,7 @@ export default function Navbar() {
 								className='nav-link'
 								to='home'
 								exact
+								ref={homeRef}
 							>
 								<i className='fas fa-home'></i>Home
 							</Link>
