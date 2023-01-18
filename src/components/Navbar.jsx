@@ -38,28 +38,36 @@ export default function Navbar() {
 				width: activeWidthNewAnimWidth + 'px',
 			});
 		});
-	}
-	/* function backToTop() {
 
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		
+		$(window).on('scroll', 'li', function (e) {
+			$('#navbarSupportedContent ul li').removeClass('active');
+			$(this).addClass('active');
+
+			let activeWidthNewAnimHeight = $(this).innerHeight();
+			let activeWidthNewAnimWidth = $(this).innerWidth();
+			let itemPosNewAnimTop = $(this).position();
+			let itemPosNewAnimLeft = $(this).position();
+			$('.hori-selector').css({
+				top: itemPosNewAnimTop.top + 'px',
+				left: itemPosNewAnimLeft.left + 'px',
+				height: activeWidthNewAnimHeight + 'px',
+				width: activeWidthNewAnimWidth + 'px',
+			});
 		});
-		let newTab = $('#navbarSupportedContent');
-		console.log(newTab.find('active'));
-	} */
+	}
 
+	
 	useEffect(() => {
 		animation();
-	
+
 		$(window).on('resize', function () {
 			setTimeout(function () {
 				animation();
 			}, 500);
 		});
-
 	}, []);
+
+	
 
 	return (
 		<nav id='navbar' className='navbar navbar-expand-lg navbar-mainbg'>

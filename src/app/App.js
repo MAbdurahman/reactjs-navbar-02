@@ -13,7 +13,7 @@ function App() {
 			id='app'
 			data-spy='scroll'
 			data-target='.nav-item > a'
-			data-offset='50'
+			data-offset='-100'
 		>
 			<Navbar />
 			<ScrollTopButton />
