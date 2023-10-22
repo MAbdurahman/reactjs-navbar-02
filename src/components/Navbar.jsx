@@ -39,6 +39,11 @@ export default function Navbar() {
 			});
 		});
 
+		$('.nav-link').on('click', function(e) {
+			e.preventDefault();
+			document.getElementById('navbarSupportedContent').classList.remove('show');
+
+		})
 		$(window).on('scroll', 'li', function (e) {
 			$('#navbarSupportedContent ul li').removeClass('active');
 			$(this).addClass('active');
@@ -54,6 +59,8 @@ export default function Navbar() {
 				width: activeWidthNewAnimWidth + 'px',
 			});
 		});
+
+
 	}
 
 	

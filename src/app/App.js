@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './../components/Navbar';
-import ScrollTopButton from './../components/ScrollTopButton';
+/*import ScrollTopButton from './../components/ScrollTopButton';*/
 import Home from './../pages/Home';
 import About from './../pages/About';
 import Skills from './../pages/Skills';
@@ -16,7 +16,7 @@ function App() {
 			data-offset='-100'
 		>
 			<Navbar />
-			<ScrollTopButton />
+			{/*<ScrollTopButton />*/}
 			<Home />
 			<About />
 			<Skills />
